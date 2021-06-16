@@ -4,7 +4,7 @@ public abstract class Ingredient {
 	private String color;
 	private String freshness;
 	
-	public Ingredient(String color, String freshness) {
+	protected Ingredient(String color, String freshness) {
 		super();
 		this.color = color;
 		this.freshness = freshness;
