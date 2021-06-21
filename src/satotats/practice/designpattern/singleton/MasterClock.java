@@ -1,7 +1,7 @@
 package satotats.practice.designpattern.singleton;
 
 /** 
- * @see https://docs.oracle.com/javase/specs/jls/se16/html/jls-12.html#jls-12.4 
+ * @see <a href="https://docs.oracle.com/javase/specs/jls/se16/html/jls-12.html#jls-12.4">Java SE spec 12.4 
  */
 public class MasterClock {
 
