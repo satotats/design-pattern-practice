@@ -1,19 +1,21 @@
 package satotats.practice.designpattern.absfactory;
 
-import satotats.practice.designpattern.absfactory.concrete.JavaFactory;
-import satotats.practice.designpattern.absfactory.concrete.PyFactory;
 import satotats.practice.designpattern.absfactory.factory.Factory;
 import satotats.practice.designpattern.absfactory.factory.Loop;
 import satotats.practice.designpattern.absfactory.factory.Println;
 import satotats.practice.designpattern.absfactory.factory.Program;
 
 public class Main {
+	
+	/** 
+	 * @param args Specify the FQCN corresponding to the programming language you want to generate
+	 * <br> * use the 1st argument
+	 * <br> Java: satotats.practice.designpattern.absfactory.concrete.JavaFactory
+	 * <br> Python: satotats.practice.designpattern.absfactory.concrete.PyFactory
+	 */
 	public static void main(String[] args) {
-		Factory jf = new JavaFactory();
-		Factory pf = new PyFactory();
-		
-		generate(jf);
-		generate(pf);
+		Factory f = Factory.getFactory(args[0]);
+		generate(f);
 	}
 	
 	private static void generate(Factory f) {

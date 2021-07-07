@@ -7,6 +7,7 @@ public abstract class Factory {
 		try {
 			factory = (Factory) Class.forName(className).getConstructor().newInstance();
 		} catch (Exception e) {
+			e.printStackTrace();
 			throw new RuntimeException();
 		}
 		return factory;
