@@ -9,7 +9,7 @@ public class Player {
 		this.strategy = strategy;
 	}
 	
-	void chooseSticks(int[] sticks) {
-		this.strategy.chooseSticks(sticks);
+	void deleteSticks(int[] sticks) {
+		this.strategy.deleteSticks(sticks);
 	}
 }

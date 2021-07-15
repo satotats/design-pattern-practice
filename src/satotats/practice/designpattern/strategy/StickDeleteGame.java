@@ -42,7 +42,7 @@ public class StickDeleteGame {
 		while (true) {
 			log.debug("------ Phase " + (++phase) + " ------");
 			log.debug("****** Player1's turn ******");
-			p1.chooseSticks(sticks);
+			p1.deleteSticks(sticks);
 			printSticks(sticks);
 			if (isOver(sticks)) {
 				log.debug("★★★ Player2 won! ★★★");
@@ -50,7 +50,7 @@ public class StickDeleteGame {
 			}
 
 			log.debug("****** Player2 turn ******");
-			p2.chooseSticks(sticks);
+			p2.deleteSticks(sticks);
 			printSticks(sticks);
 			if (isOver(sticks)) {
 				log.debug("★★★ Player1 won! ★★★");
