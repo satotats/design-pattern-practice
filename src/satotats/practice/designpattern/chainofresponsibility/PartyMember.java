@@ -37,7 +37,7 @@ public abstract class PartyMember extends Pokemon {
 			next.battle(pokemon);
 		} else {
 			System.err.println("目の前が まっくらになった！");
-			System.out.println("INPORTANT NOTICE: ポケモンセンターには 計画的に 足をはこびましょう");
+			System.out.println("IMPORTANT NOTICE: ポケモンセンターには 計画的に 足をはこびましょう");
 		}
 	}
 
