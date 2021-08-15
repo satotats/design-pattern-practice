@@ -23,5 +23,7 @@ Java, Kotlin
 14. Chain of responsibility pattern
 15. Facade pattern
 16. Mediator pattern
+17. Observer pattern
+18. Memento pattern
 
 To be continued...
