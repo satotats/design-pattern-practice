@@ -18,6 +18,10 @@ object Sunny : Weather {
     override fun humidityChange(ctx: Planet) {
         ctx.updateHumidity(-10)
     }
+
+    override fun toString(): String {
+        return "Sunny"
+    }
 }
 
 object Rainy : Weather {
@@ -36,6 +40,10 @@ object Rainy : Weather {
     override fun humidityChange(ctx: Planet) {
         ctx.updateHumidity(+20)
     }
+
+    override fun toString(): String {
+        return "Rainy"
+    }
 }
 
 object Cloudy : Weather {
@@ -52,7 +60,11 @@ object Cloudy : Weather {
     }
 
     override fun humidityChange(ctx: Planet) {
-        ctx.updateTemperature(+10)
+        ctx.updateHumidity(+10)
+    }
+
+    override fun toString(): String {
+        return "Cloudy"
     }
 }
 
@@ -99,14 +111,18 @@ class PlanetEarth(
     }
 
     override fun updateHumidity(diffsInPercentage: Int) {
-        humidity += diffsInPercentage
+        val tryUpdated = humidity + diffsInPercentage
+
+        if (tryUpdated in 0..100) {
+            humidity = tryUpdated
+        }
     }
 }
 
 fun main() {
     val earth = PlanetEarth()
     for (n in 1..100) {
-        println("day $n")
+        print("day $n: ")
         earth.clock()
     }
 }
