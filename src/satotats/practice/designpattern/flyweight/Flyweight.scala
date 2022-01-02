@@ -3,6 +3,9 @@ package satotats.practice.designpattern.flyweight
 import java.io.{BufferedReader, FileReader}
 import scala.collection.mutable
 
+/** 「増補改訂版Java言語で学ぶデザインパターン入門」(2004, 結城浩) の
+ * Flyweight pattern実装のscala版(諸般の都合で一部改変) */
+
 class BigChar(private val charName: Char) {
   private val fontData = BigCharLibrary.get(charName.toLower)
 
